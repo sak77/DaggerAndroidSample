@@ -28,7 +28,7 @@ import javax.inject.Scope
  * sub-component of the ApplicationComponent.
  *
  * Subcomponent:
- * - inherits from and extend object graph from the parent component. Thus all objects
+ * - inherits from and extends object graph from the parent component. Thus all objects
  * provided by parent component are provided by the sub-component too.
  * - Can be tied to lifecycle of an activity/fragment instead of ApplicationComponent
  * which holds instances throughout lifetime of the app.
@@ -63,6 +63,10 @@ import javax.inject.Scope
  * We can define our own annotation to define scope at activity level.
  */
 
+/*
+Scope has to be named based on the lifecyle during which it
+exists.
+ */
 @Scope
 @Retention(value = AnnotationRetention.RUNTIME)
 annotation class ActivityScope {

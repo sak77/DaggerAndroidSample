@@ -6,31 +6,36 @@ import javax.inject.Inject
 import kotlin.math.log
 
 /**
- * Because certain Android framework classes such as activities and fragments are instantiated by
- * the system, Dagger can't create them for you.
+ * Android framework classes such as Activity and Fragment
+ * are instantiated by the system. So Dagger can't create them
+ * for you.
  *
- * For example, in Activity, all initialization code goes in onCreate() method which Dagger cannot
- * create for you. So instead of using constructor injection, we should use field injection.
+ * For example, in Activity, all initialization code goes in
+ * onCreate() method which Dagger cannot create for you. So
+ * instead of using constructor injection, we should use field
+ * injection.
  *
- * NOTE: Field injection should only be used in Android framework classes where constructor injection
- * cannot be used.
+ * NOTE: Field injection should only be used in Android framework
+ * classes where constructor injection cannot be used.
  */
 class LoginActivity : AppCompatActivity() {
 
-    // Dagger will provide an instance of LoginProxyImpl from its graph
+    // Dagger will provide an instance of LoginProxyImpl from its
+    // graph
     @Inject
     lateinit var loginProxyImpl: LoginProxyImpl
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         /*
-            When using activities, inject Dagger in the activity's onCreate() method
-            before calling super.onCreate() to avoid issues with fragment restoration.
+            When using activities, inject Dagger in the activity's
+            onCreate() method before calling super.onCreate() to
+            avoid issues with fragment restoration.
          */
 
         /*
-        LoginComponent is derived from the ApplicationComponent, since it is
-        its subcomponent.
+        LoginComponent is derived from the ApplicationComponent,
+        since it is its subcomponent.
          */
         val loginComponent =
             (applicationContext as MyApplication).applicationComponent
