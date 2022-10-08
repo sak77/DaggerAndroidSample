@@ -1,5 +1,6 @@
 package com.example.daggerandroidsample
 
+import com.example.daggerandroidsample.di.ActivityScope
 import javax.inject.Inject
 
 /*

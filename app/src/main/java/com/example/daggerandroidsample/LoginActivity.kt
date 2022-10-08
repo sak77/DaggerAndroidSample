@@ -17,26 +17,29 @@ import kotlin.math.log
  */
 class LoginActivity : AppCompatActivity() {
 
-    // You want Dagger to provide an instance of LoginProxyImpl from the graph
+    // Dagger will provide an instance of LoginProxyImpl from its graph
     @Inject
     lateinit var loginProxyImpl: LoginProxyImpl
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         /*
-            When using activities, inject Dagger in the activity's onCreate() method before calling
-            super.onCreate() to avoid issues with fragment restoration.
+            When using activities, inject Dagger in the activity's onCreate() method
+            before calling super.onCreate() to avoid issues with fragment restoration.
          */
 
         /*
-        LoginComponent is derived from the ApplicationComponent, since it is its subcomponent.
+        LoginComponent is derived from the ApplicationComponent, since it is
+        its subcomponent.
          */
-        val loginComponent = (applicationContext as MyApplication).applicationComponent.loginComponent().create()
+        val loginComponent =
+            (applicationContext as MyApplication).applicationComponent
+                .loginComponent().create()
 
         loginComponent.inject(this)
         //Instead of field injection, if using constructor injection. Then one can
-        //call such getter method from the component class which returns instance of LoginProxyImpl
-        //val loginProxyImpl = loginComponent.getLonginProxyInstance()
+        //call such getter method from the component class which returns instance of
+        //LoginProxyImpl: val loginProxyImpl = loginComponent.getLonginProxyInstance()
 
         //Now LoginProxyImpl class is available..
         super.onCreate(savedInstanceState)

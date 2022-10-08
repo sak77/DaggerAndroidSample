@@ -1,5 +1,7 @@
-package com.example.daggerandroidsample
+package com.example.daggerandroidsample.di
 
+import com.example.daggerandroidsample.LoginActivity
+import com.example.daggerandroidsample.LoginFragment
 import dagger.Subcomponent
 import javax.inject.Scope
 

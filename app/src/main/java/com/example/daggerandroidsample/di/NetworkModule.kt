@@ -1,4 +1,4 @@
-package com.example.daggerandroidsample
+package com.example.daggerandroidsample.di
 
 import dagger.Module
 

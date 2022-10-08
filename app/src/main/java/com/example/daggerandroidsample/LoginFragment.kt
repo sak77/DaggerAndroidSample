@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.daggerandroidsample.di.DaggerApplicationComponent
 import javax.inject.Inject
 
 class LoginFragment : Fragment() {

@@ -1,5 +1,6 @@
-package com.example.daggerandroidsample
+package com.example.daggerandroidsample.di
 
+import com.example.daggerandroidsample.UserRepository
 import dagger.Component
 
 @Component (modules = [NetworkModule::class, LoginModule::class])
