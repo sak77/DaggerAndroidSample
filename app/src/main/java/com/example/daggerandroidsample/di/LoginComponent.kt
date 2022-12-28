@@ -64,7 +64,7 @@ import javax.inject.Scope
  */
 
 /*
-Scope has to be named based on the lifecyle during which it
+Scope has to be named based on the lifecycle during which it
 exists.
  */
 @Scope
