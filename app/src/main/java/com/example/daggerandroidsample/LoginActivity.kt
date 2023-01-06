@@ -48,8 +48,8 @@ class LoginActivity : AppCompatActivity() {
 
         //Now LoginProxyImpl class is available..
         super.onCreate(savedInstanceState)
-
-        loginProxyImpl.checkStatus()
+        setContentView(R.layout.activity_login)
+        //loginProxyImpl.checkStatus()
 
     }
 }
