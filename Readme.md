@@ -3,10 +3,10 @@ In SampleDaggerApp we looked at basics of Dagger in Android.
 Here, we look at Subcomponents and field injection. This is second 
 in series of apps which look at using Dagger in Android.
 
-Field injections can be used in cases where we need to instantiate 
-Android framework classes such as Activity and Fragment. 
+Field injections can be used to provide dependencies inside 
+Android framework classes such as Activity or Fragment. 
 
-These classes are instantiated by the Framework. There is no 
+Framework classes are instantiated by the Framework. There is no 
 constructor which you can define to create their instance. 
 For example, Activity only provides onCreate() which allows you 
 to instantiate the activity. But you cannot use constructor 
@@ -29,14 +29,10 @@ the particular activity to its graph.
 
 Sub-components are components which extend from the application 
 component but are tied to lifecycle of an Activity or Fragment. 
-So each time the activity/framgent exists, it has a unique instance 
+So each time the activity/fragment exists, it has a unique instance 
 of the requested class. We also need to define a custom scope for 
 the sub-component (ActivityScope in this case). And all classes 
 annotated with this scope will be unique during lifecycle of the 
 scope. 
-
-
-
-
 
 

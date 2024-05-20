@@ -4,8 +4,8 @@ import com.example.daggerandroidsample.di.ActivityScope
 import javax.inject.Inject
 
 /*
-A regular class that acts like a viewmodel..
-Since ViewModels cannot have constructor injection.
+A regular class that acts like a viewmodel..because it is not easy
+to inject viewmodel dependencies using constructor injection via Dagger2.
 Refer comments in LoginViewModel class for more details.
  */
 

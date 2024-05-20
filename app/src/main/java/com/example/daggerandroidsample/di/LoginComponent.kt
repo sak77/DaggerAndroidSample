@@ -86,8 +86,8 @@ interface LoginComponent {
     class which returns instance of the required classes.
 
     But in case of field injection, one has to use @Inject annotation to request Dagger
-    to provide instance of the required class. As it is done here in LoginActvity for eg.
-    But for it to work, Dagger has to prepare dependencies required by LoginActvity.
+    to provide instance of the required class. As it is done here in LoginActivity for eg.
+    But for it to work, Dagger has to prepare dependencies required by LoginActivity.
     So that is why one has to declare an inject function in the component class and
     pass instance of the requesting class (LoginActivity). This will tell Dagger that
     LoginActivity will request some instances via @Inject and so it has to prepare these

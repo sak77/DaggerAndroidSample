@@ -42,9 +42,11 @@ class LoginActivity : AppCompatActivity() {
                 .loginComponent().create()
 
         loginComponent.inject(this)
-        //Instead of field injection, if using constructor injection. Then one can
-        //call such getter method from the component class which returns instance of
-        //LoginProxyImpl: val loginProxyImpl = loginComponent.getLonginProxyInstance()
+        /*
+        Instead of field injection, if using constructor injection. Then one can
+        call such getter method from the component class which returns instance of
+        LoginProxyImpl: val loginProxyImpl = loginComponent.getLonginProxyInstance()
+         */
 
         //Now LoginProxyImpl class is available..
         super.onCreate(savedInstanceState)
